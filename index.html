@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+    <title>Qr Code Reader-Generator</title>
+    <!--
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+-->
+    <link rel='stylesheet' href='./css/main.css' />
+</head>
+
+<body>
+    <div class="container control-tab">
+        <main class="tab__item tab-active" id="home-tab-item">
+            <div class="logo-app">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+                    <linearGradient id="3EkqUGIfMbZO_PtMe92fqa" x1="23" x2="23" y1="39" y2="43.382" gradientUnits="userSpaceOnUse" spreadMethod="reflect">
+                        <stop offset="0" stop-color="#6dc7ff" />
+                        <stop offset="1" stop-color="#e6abff" />
+                    </linearGradient>
+                    <path fill="url(#3EkqUGIfMbZO_PtMe92fqa)" d="M21 39H25V43H21z" />
+                    <linearGradient id="3EkqUGIfMbZO_PtMe92fqb" x1="41" x2="41" y1="21" y2="25.625" gradientUnits="userSpaceOnUse" spreadMethod="reflect">
+                        <stop offset="0" stop-color="#6dc7ff" />
+                        <stop offset="1" stop-color="#e6abff" />
+                    </linearGradient>
+                    <path fill="url(#3EkqUGIfMbZO_PtMe92fqb)" d="M39 21H43V25H39z" />
+                    <linearGradient id="3EkqUGIfMbZO_PtMe92fqc" x1="32" x2="32" y1="6.833" y2="57.522" gradientUnits="userSpaceOnUse" spreadMethod="reflect">
+                        <stop offset="0" stop-color="#1a6dff" />
+                        <stop offset="1" stop-color="#c822ff" />
+                    </linearGradient>
+                    <path fill="url(#3EkqUGIfMbZO_PtMe92fqc)" d="M52,7H12c-2.757,0-5,2.243-5,5v40c0,2.757,2.243,5,5,5h40c2.757,0,5-2.243,5-5V12 C57,9.243,54.757,7,52,7z M55,52c0,1.654-1.346,3-3,3H12c-1.654,0-3-1.346-3-3V12c0-1.654,1.346-3,3-3h40c1.654,0,3,1.346,3,3V52z" />
+                    <linearGradient id="3EkqUGIfMbZO_PtMe92fqd" x1="23" x2="23" y1="6.833" y2="57.522" gradientUnits="userSpaceOnUse" spreadMethod="reflect">
+                        <stop offset="0" stop-color="#1a6dff" />
+                        <stop offset="1" stop-color="#c822ff" />
+                    </linearGradient>
+                    <path fill="url(#3EkqUGIfMbZO_PtMe92fqd)" d="M29,33H17c-1.103,0-2,0.897-2,2v12c0,1.103,0.897,2,2,2h12c1.103,0,2-0.897,2-2V35 C31,33.897,30.103,33,29,33z M17,47V35h12l0.002,12H17z" />
+                    <linearGradient id="3EkqUGIfMbZO_PtMe92fqe" x1="23" x2="23" y1="6.833" y2="57.522" gradientUnits="userSpaceOnUse" spreadMethod="reflect">
+                        <stop offset="0" stop-color="#1a6dff" />
+                        <stop offset="1" stop-color="#c822ff" />
+                    </linearGradient>
+                    <path fill="url(#3EkqUGIfMbZO_PtMe92fqe)" d="M25,37h-4c-1.103,0-2,0.897-2,2v4c0,1.103,0.897,2,2,2h4c1.103,0,2-0.897,2-2v-4 C27,37.897,26.103,37,25,37z M21,43v-4h4l0.002,4H21z" />
+                    <linearGradient id="3EkqUGIfMbZO_PtMe92fqf" x1="41" x2="41" y1="6.833" y2="57.522" gradientUnits="userSpaceOnUse" spreadMethod="reflect">
+                        <stop offset="0" stop-color="#1a6dff" />
+                        <stop offset="1" stop-color="#c822ff" />
+                    </linearGradient>
+                    <path fill="url(#3EkqUGIfMbZO_PtMe92fqf)" d="M47,15H35c-1.103,0-2,0.897-2,2v12c0,1.103,0.897,2,2,2h12c1.103,0,2-0.897,2-2V17 C49,15.897,48.103,15,47,15z M35,29V17h12l0.002,12H35z" />
+                    <linearGradient id="3EkqUGIfMbZO_PtMe92fqg" x1="41" x2="41" y1="6.833" y2="57.522" gradientUnits="userSpaceOnUse" spreadMethod="reflect">
+                        <stop offset="0" stop-color="#1a6dff" />
+                        <stop offset="1" stop-color="#c822ff" />
+                    </linearGradient>
+                    <path fill="url(#3EkqUGIfMbZO_PtMe92fqg)" d="M43,19h-4c-1.103,0-2,0.897-2,2v4c0,1.103,0.897,2,2,2h4c1.103,0,2-0.897,2-2v-4 C45,19.897,44.103,19,43,19z M39,25v-4h4l0.002,4H39z" />
+                    <linearGradient id="3EkqUGIfMbZO_PtMe92fqh" x1="23" x2="23" y1="6.833" y2="57.522" gradientUnits="userSpaceOnUse" spreadMethod="reflect">
+                        <stop offset="0" stop-color="#1a6dff" />
+                        <stop offset="1" stop-color="#c822ff" />
+                    </linearGradient>
+                    <path fill="url(#3EkqUGIfMbZO_PtMe92fqh)" d="M29,15H17c-1.103,0-2,0.897-2,2v12c0,1.103,0.897,2,2,2h12c1.103,0,2-0.897,2-2V17 C31,15.897,30.103,15,29,15z M17,29V17h12l0.002,12H17z" />
+                    <linearGradient id="3EkqUGIfMbZO_PtMe92fqi" x1="23" x2="23" y1="6.833" y2="57.522" gradientUnits="userSpaceOnUse" spreadMethod="reflect">
+                        <stop offset="0" stop-color="#1a6dff" />
+                        <stop offset="1" stop-color="#c822ff" />
+                    </linearGradient>
+                    <path fill="url(#3EkqUGIfMbZO_PtMe92fqi)" d="M25,19h-4c-1.103,0-2,0.897-2,2v4c0,1.103,0.897,2,2,2h4c1.103,0,2-0.897,2-2v-4 C27,19.897,26.103,19,25,19z M21,25v-4h4l0.002,4H21z" />
+                    <linearGradient id="3EkqUGIfMbZO_PtMe92fqj" x1="37" x2="37" y1="6.833" y2="57.522" gradientUnits="userSpaceOnUse" spreadMethod="reflect">
+                        <stop offset="0" stop-color="#1a6dff" />
+                        <stop offset="1" stop-color="#c822ff" />
+                    </linearGradient>
+                    <path fill="url(#3EkqUGIfMbZO_PtMe92fqj)" d="M35,39h4v4h2v-4c0-1.103-0.897-2-2-2h-4v-2h2v-2h-2c-1.103,0-2,0.897-2,2v5h2V39z" />
+                    <linearGradient id="3EkqUGIfMbZO_PtMe92fqk" x1="35" x2="35" y1="6.833" y2="57.522" gradientUnits="userSpaceOnUse" spreadMethod="reflect">
+                        <stop offset="0" stop-color="#1a6dff" />
+                        <stop offset="1" stop-color="#c822ff" />
+                    </linearGradient>
+                    <path fill="url(#3EkqUGIfMbZO_PtMe92fqk)" d="M35,42h-2v5c0,1.103,0.897,2,2,2h2v-2h-2V42z" />
+                    <linearGradient id="3EkqUGIfMbZO_PtMe92fql" x1="40" x2="40" y1="6.833" y2="57.522" gradientUnits="userSpaceOnUse" spreadMethod="reflect">
+                        <stop offset="0" stop-color="#1a6dff" />
+                        <stop offset="1" stop-color="#c822ff" />
+                    </linearGradient>
+                    <path fill="url(#3EkqUGIfMbZO_PtMe92fql)" d="M39 33H41V35H39z" />
+                    <linearGradient id="3EkqUGIfMbZO_PtMe92fqm" x1="46" x2="46" y1="6.833" y2="57.522" gradientUnits="userSpaceOnUse" spreadMethod="reflect">
+                        <stop offset="0" stop-color="#1a6dff" />
+                        <stop offset="1" stop-color="#c822ff" />
+                    </linearGradient>
+                    <path fill="url(#3EkqUGIfMbZO_PtMe92fqm)" d="M47,33h-4v2h4v5h2v-5C49,33.897,48.103,33,47,33z" />
+                    <linearGradient id="3EkqUGIfMbZO_PtMe92fqn" x1="41" x2="41" y1="6.833" y2="57.522" gradientUnits="userSpaceOnUse" spreadMethod="reflect">
+                        <stop offset="0" stop-color="#1a6dff" />
+                        <stop offset="1" stop-color="#c822ff" />
+                    </linearGradient>
+                    <path fill="url(#3EkqUGIfMbZO_PtMe92fqn)" d="M41,45h-2v2c0,1.103,0.897,2,2,2h2v-2h-2V45z" />
+                    <linearGradient id="3EkqUGIfMbZO_PtMe92fqo" x1="47" x2="47" y1="6.833" y2="57.522" gradientUnits="userSpaceOnUse" spreadMethod="reflect">
+                        <stop offset="0" stop-color="#1a6dff" />
+                        <stop offset="1" stop-color="#c822ff" />
+                    </linearGradient>
+                    <path fill="url(#3EkqUGIfMbZO_PtMe92fqo)" d="M47,47h-2v2h2c1.103,0,2-0.897,2-2v-5h-2V47z" />
+                    <linearGradient id="3EkqUGIfMbZO_PtMe92fqp" x1="44.5" x2="44.5" y1="6.833" y2="57.522" gradientUnits="userSpaceOnUse" spreadMethod="reflect">
+                        <stop offset="0" stop-color="#1a6dff" />
+                        <stop offset="1" stop-color="#c822ff" />
+                    </linearGradient>
+                    <path fill="url(#3EkqUGIfMbZO_PtMe92fqp)" d="M46,45v-2c0-1.103-0.897-2-2-2h-1v2h1v2H46z" />
+                    <linearGradient id="3EkqUGIfMbZO_PtMe92fqq" x1="45" x2="45" y1="6.833" y2="57.522" gradientUnits="userSpaceOnUse" spreadMethod="reflect">
+                        <stop offset="0" stop-color="#1a6dff" />
+                        <stop offset="1" stop-color="#c822ff" />
+                    </linearGradient>
+                    <path fill="url(#3EkqUGIfMbZO_PtMe92fqq)" d="M44 37H46V39H44z" />
+                    <linearGradient id="3EkqUGIfMbZO_PtMe92fqr" x1="37" x2="37" y1="6.833" y2="57.522" gradientUnits="userSpaceOnUse" spreadMethod="reflect">
+                        <stop offset="0" stop-color="#1a6dff" />
+                        <stop offset="1" stop-color="#c822ff" />
+                    </linearGradient>
+                    <path fill="url(#3EkqUGIfMbZO_PtMe92fqr)" d="M36 43H38V45H36z" />
+                    <linearGradient id="3EkqUGIfMbZO_PtMe92fqs" x1="23" x2="23" y1="21" y2="25.625" gradientUnits="userSpaceOnUse" spreadMethod="reflect">
+                        <stop offset="0" stop-color="#6dc7ff" />
+                        <stop offset="1" stop-color="#e6abff" />
+                    </linearGradient>
+                    <path fill="url(#3EkqUGIfMbZO_PtMe92fqs)" d="M21 21H25V25H21z" />
+                </svg>
+            </div>
+            <h1 id="name-app">QR CODE READER-GENERATOR</h1>
+            <div class="control-btn">
+                <button class="btn-menu-tab" id="generator-menu" go-item-value="1">GENERATE QR CODE</button>
+                <button class="btn-menu-tab" id="read-menu" go-item-value="2">READ QR CODE</button>
+                <button class="btn-menu-tab" id="about-menu" go-item-value="3">ABOUT</button>
+            </div>
+        </main>
+        <main class="tab__item tab-disabled" id="generator-tab-item">
+            <div class="header-tab">
+                <button class="back-btn" back-item-value="0" title="back to home page">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M5 8L1 12L5 16L5 13L23 13L23 11L5 11L5 8 z" fill="#FFFFFF" />
+                    </svg>
+                </button>
+                <span class="tab-title">GENERATE</span>
+            </div>
+            <div class="generate-option-container content-tab">
+                <p class="text-content-tab">How do you want generated your QR Code ?</p>
+                <div class="option-content">
+                    <div class="option-generate" id="email">
+                        <span class="box-click"></span>
+                        <div class="icons-option-box">
+                            <div class="icons">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M12 2C6.4886661 2 2 6.4886661 2 12C2 17.511334 6.4886661 22 12 22L17 22L17 20L12 20C7.5693339 20 4 16.430666 4 12C4 7.5693339 7.5693339 4 12 4C16.430666 4 20 7.5693339 20 12L20 13.5C20 14.340812 19.340812 15 18.5 15C17.659188 15 17 14.340812 17 13.5L17 12C17 9.2504209 14.749579 7 12 7C9.2504209 7 7 9.2504209 7 12C7 14.749579 9.2504209 17 12 17C13.413556 17 14.687859 16.398875 15.599609 15.447266C16.230695 16.380863 17.297708 17 18.5 17C20.421188 17 22 15.421188 22 13.5L22 12C22 6.4886661 17.511334 2 12 2 z M 12 9C13.668699 9 15 10.331301 15 12C15 13.668699 13.668699 15 12 15C10.331301 15 9 13.668699 9 12C9 10.331301 10.331301 9 12 9 z" fill="#FFFFFF" />
+                                </svg>
+                            </div>
+                        </div>
+                        <span class="option-name">Email</span>
+                    </div>
+
+                    <div class="option-generate" id="Url">
+                        <span class="box-click"></span>
+                        <div class="icons-option-box">
+
+                            <div class="icons">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M12 2C8.308 2 5.0855156 4.016 3.3535156 7L5.7949219 7C6.6949219 5.888 7.8693281 5.0079531 9.2363281 4.5019531C8.9233281 5.2299531 8.6724688 6.08 8.4804688 7L10.537109 7C11.016109 5.023 11.687 4 12 4C12.313 4 12.983891 5.023 13.462891 7L15.519531 7C15.327531 6.08 15.075672 5.2299531 14.763672 4.5019531C16.129672 5.0079531 17.305078 5.888 18.205078 7L20.646484 7C18.914484 4.016 15.692 2 12 2 z M 1 9L2.2421875 15L3.5507812 15L4.4003906 11.529297L5.2480469 15L6.5507812 15L7.7929688 9L6.2890625 9L5.7519531 12.365234L4.953125 9L3.8398438 9L3.0390625 12.371094L2.5078125 9L1 9 z M 8.6035156 9L9.8457031 15L11.154297 15L12.003906 11.529297L12.851562 15L14.154297 15L15.396484 9L13.894531 9L13.355469 12.365234L12.558594 9L11.443359 9L10.644531 12.371094L10.111328 9L8.6035156 9 z M 16.207031 9L17.449219 15L18.757812 15L19.607422 11.529297L20.455078 15L21.757812 15L23 9L21.496094 9L20.958984 12.365234L20.160156 9L19.046875 9L18.246094 12.371094L17.714844 9L16.207031 9 z M 3.3535156 17C5.0855156 19.984 8.308 22 12 22C15.692 22 18.914484 19.984 20.646484 17L18.205078 17C17.305078 18.112 16.130672 18.992047 14.763672 19.498047C15.075672 18.770047 15.325578 17.92 15.517578 17L13.460938 17C12.981938 18.977 12.311047 20 11.998047 20C11.685047 20 11.016109 18.977 10.537109 17L8.4804688 17C8.6724688 17.92 8.9243281 18.770047 9.2363281 19.498047C7.8703281 18.992047 6.6949219 18.112 5.7949219 17L3.3535156 17 z" fill="#FFFFFF" />
+                                </svg>
+                            </div>
+                        </div>
+                        <span class="option-name">Website URL</span>
+                    </div>
+
+
+                    <div class="option-generate" id="phone">
+                        <span class="box-click"></span>
+                        <div class="icons-option-box">
+
+                            <div class="icons">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M20.023,15.488c-0.63-0.015-1.423-0.052-1.924-0.14c-0.542-0.096-1.194-0.282-1.653-0.425 c-0.36-0.112-0.752-0.013-1.019,0.253L13.21,17.38c-1.532-0.807-2.759-1.747-3.798-2.792c-1.045-1.039-1.985-2.266-2.792-3.798 l2.204-2.218C9.09,8.305,9.189,7.913,9.077,7.553C8.935,7.095,8.748,6.443,8.653,5.901C8.564,5.4,8.528,4.607,8.512,3.977 C8.499,3.432,8.055,3,7.51,3H4C3.562,3,3,3.328,3,4c0,4.539,1.84,8.874,4.966,12.034C11.126,19.16,15.461,21,20,21 c0.672,0,1-0.562,1-1v-3.51C21,15.945,20.568,15.501,20.023,15.488z" fill="#FFFFFF" />
+                                </svg>
+                            </div>
+                        </div>
+                        <span class="option-name">Phone Number</span>
+                    </div>
+
+
+                    <div class="option-generate" id="sms">
+                        <span class="box-click"></span>
+                        <div class="icons-option-box">
+                            <div class="icons">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M20,3H4C2.9,3,2.01,3.9,2.01,5L2,23l4-4h14c1.1,0,2-0.9,2-2V5C22,3.9,21.1,3,20,3z M9,12H7v-2h2V12z M13,12h-2v-2h2V12z M17,12h-2v-2h2V12z" fill="#FFFFFF" />
+                                </svg>
+                            </div>
+                        </div>
+                        <span class="option-name">SMS</span>
+                    </div>
+                    <div class="option-generate" id="UserCart">
+                        <span class="box-click"></span>
+                        <div class="icons-option-box">
+                            <div class="icons">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M19,3H5C3.895,3,3,3.895,3,5v14c0,1.105,0.895,2,2,2h14c1.105,0,2-0.895,2-2V5C21,3.895,20.105,3,19,3z M12,6 c1.7,0,3,1.3,3,3s-1.3,3-3,3s-3-1.3-3-3S10.3,6,12,6z M18,18H6c0,0,0-0.585,0-1c0-1.571,2.722-3,6-3s6,1.429,6,3 C18,17.415,18,18,18,18z" fill="#FFFFFF" />
+                                </svg>
+                            </div>
+                        </div>
+                        <span class="option-name">User Information</span>
+                    </div>
+
+                    <div class="option-generate" id="text">
+                         <span class="box-click" ></span>
+                        <div class="icons-option-box">
+                            <div class="icons">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M4 3L4 7L6 7L6 5L11 5L11 19L9 19L9 21L15 21L15 19L13 19L13 5L18 5L18 7L20 7L20 3L4 3 z" fill="#FFFFFF" />
+                                </svg>
+                            </div>
+                        </div>
+                        <span class="option-name">Text</span>
+                       
+                    </div>
+                </div>
+
+
+            </div>
+            <article class="modal-generator modal-hide">
+                <div class="content">
+                    <span class="header-conten">
+                        <p>Generate QR Code for Email Adress</p>
+                        <button class="close-modal-qr-code">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+                                <path d="M9.15625 6.3125L6.3125 9.15625L22.15625 25L6.21875 40.96875L9.03125 43.78125L25 27.84375L40.9375 43.78125L43.78125 40.9375L27.84375 25L43.6875 9.15625L40.84375 6.3125L25 22.15625Z" fill="#FFFFFF" />
+                            </svg>
+                        </button>
+                    </span>
+                    <div class="box">
+                        <div class="form-information">
+                            <input type="email" name="emailAddress" id="" placeholder="Enter Your Email Here (e.g: abc@gmail.com)">
+                            <input type="text" name="subjectEmail" id="" placeholder="Enter Subject">
+                            <input type="text" name="subjectEmail" id="" placeholder="Enter Subject">
+                            <input type="text" name="subjectEmail" id="" placeholder="Enter Subject">
+                        </div>
+                        <button class="btn-generate">Generate Qr Code</button>
+                        <div class="output-code">
+                            <div class="qr-code-generate"></div>
+                            <button class="btn-save-qr-code">Save the image</button>
+                        </div>
+
+                    </div>
+                </div>
+
+            </article>
+        </main>
+    </div>
+    <script src="./js/qrcode.min.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/generate-qrcode.js"></script>
+</body>
+
+</html>
