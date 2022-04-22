@@ -397,6 +397,7 @@ body {
   height: 100vh;
   font-family: "Poppins-Regular";
   background: #333333;
+  overflow: hidden;
 }
 
 .container {
@@ -404,6 +405,7 @@ body {
   height: 100%;
   overflow: hidden;
   position: relative;
+  flex-direction: column;
 }
 .container .modal-result-scan-show {
   display: flex !important;
@@ -420,6 +422,7 @@ body {
   align-items: center;
   justify-content: center;
   z-index: 10000000000;
+  overflow: hidden;
 }
 .container .modal-result-scan .message {
   background: #FFFFFF;
@@ -478,6 +481,7 @@ body {
   display: none;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 .container .modal-camera-access-denied .message {
   background: #FFFFFF;

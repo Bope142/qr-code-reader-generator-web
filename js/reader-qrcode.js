@@ -42,15 +42,25 @@ async function ScanManager() {
 }
 
 
-
+const stopScan = () => {
+    html5QrCode.stop().then((ignore) => {
+        // QR Code scanning is stopped.
+        console.log(ignore)
+    }).catch((err) => {
+        // Stop failed, handle it.
+        console.log(err)
+    });
+}
 
 
 window.addEventListener('load', () => {
     document.querySelector('#scan').addEventListener('click', () => {
-        if (document.querySelector('#scan').textContent = 'STOP SCAN') {
+        if (document.querySelector('#scan').textContent === 'STOP SCAN') {
             document.querySelector('#scan').textContent = "START SCANNING"
+            stopScan()
         } else {
             ScanManager()
+
         }
 
     })
