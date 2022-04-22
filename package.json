@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "html5-qrcode": "^2.2.1",
     "qrcodejs": "^1.0.0"
   }
 }

@@ -1,6 +1,6 @@
 var qr_code_option = 0;
-const clearValueInput =()=>{
-     document.querySelectorAll('.form-information input,textarea').forEach(controll => controll.value ='')
+const clearValueInput = () => {
+    document.querySelectorAll('.form-information input,textarea').forEach(controll => controll.value = '')
 }
 const inputEvent = () => {
     document.querySelectorAll('.form-information input,textarea').forEach(controll => {
@@ -93,7 +93,7 @@ const closeModalGenerate = () => {
 const hideAllTab = () => {
     document.querySelectorAll('.tab__item').forEach(tab => tab.classList.replace('tab-active', 'tab-disabled'))
 }
-const ChangeTabItem = (itemIndex) => {
+async function ChangeTabItem(itemIndex) {
     hideAllTab();
     document.querySelectorAll('.tab__item')[itemIndex].classList.replace('tab-disabled', 'tab-active')
 }
@@ -114,8 +114,14 @@ const EventBackTabItem = () => {
     })
 }
 
-
-
+const closeModal = () => {
+    document.querySelector('.close').addEventListener('click', () => {
+        document.querySelector('.modal-camera-access-denied').classList.remove('modal-message-show')
+    })
+    document.querySelector('.close-result').addEventListener('click', () => {
+        document.querySelector('.modal-result-scan').classList.remove('modal-result-scan-show')
+    })
+}
 
 
 
@@ -125,4 +131,5 @@ window.addEventListener('load', () => {
     EventBackTabItem()
     closeModalGenerate()
     openModalGenerator()
+    closeModal()
 })

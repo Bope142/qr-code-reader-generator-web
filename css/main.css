@@ -403,6 +403,123 @@ body {
   display: flex;
   height: 100%;
   overflow: hidden;
+  position: relative;
+}
+.container .modal-result-scan-show {
+  display: flex !important;
+}
+.container .modal-result-scan {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.8);
+  height: 100%;
+  width: 100%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000000000;
+}
+.container .modal-result-scan .message {
+  background: #FFFFFF;
+  overflow: hidden;
+  padding: 15px;
+  border-radius: 0.3rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  height: auto;
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+  grid-row-gap: 25px;
+}
+.container .modal-result-scan .message .head {
+  flex: none;
+  padding-bottom: 10px;
+  border-bottom: 2px solid rgba(51, 51, 51, 0.2);
+  font-family: "Poppins-Bold";
+  font-size: 0.9rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.container .modal-result-scan .message p {
+  font-family: "Poppins-Medium";
+  font-size: 0.7rem;
+  text-align: center;
+}
+.container .modal-result-scan .message .close-result {
+  padding: 10px;
+  font-family: "Poppins-Regular";
+  font-size: 0.9rem;
+  color: #FFFFFF;
+  border: none;
+  border: none;
+  transition: all 0.3s linear;
+  outline: none;
+  flex: none;
+  border-radius: 0.3rem;
+  background: #60E4C2;
+  flex: none;
+}
+.container .modal-message-show {
+  display: flex !important;
+  z-index: 100000000;
+}
+.container .modal-camera-access-denied {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  width: 100%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+.container .modal-camera-access-denied .message {
+  background: #FFFFFF;
+  overflow: hidden;
+  padding: 15px;
+  border-radius: 0.3rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  height: auto;
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+  grid-row-gap: 25px;
+}
+.container .modal-camera-access-denied .message .head {
+  flex: none;
+  padding-bottom: 10px;
+  border-bottom: 2px solid rgba(51, 51, 51, 0.2);
+  font-family: "Poppins-Bold";
+  font-size: 0.9rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.container .modal-camera-access-denied .message p {
+  font-family: "Poppins-Medium";
+  font-size: 0.7rem;
+  text-align: center;
+}
+.container .modal-camera-access-denied .message .close {
+  padding: 10px;
+  font-family: "Poppins-Regular";
+  font-size: 0.9rem;
+  color: #FFFFFF;
+  border: none;
+  border: none;
+  transition: all 0.3s linear;
+  outline: none;
+  flex: none;
+  border-radius: 0.3rem;
+  background: #60E4C2;
+  flex: none;
 }
 
 .tab__item {
@@ -852,6 +969,78 @@ body {
     padding: 25px !important;
   }
 }
+.camera-scan {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden !important;
+  position: relative;
+  background: #FFFFFF;
+}
+.camera-scan .camera-change {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  border-radius: 50%;
+  align-items: center;
+  position: absolute;
+  left: 80%;
+  top: 5%;
+  background: #011936;
+  cursor: pointer;
+}
+.camera-scan .camera-change svg * {
+  fill: #FFFFFF;
+}
+.camera-scan .scan-control {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 150px;
+  flex-direction: column;
+  grid-row-gap: 10px;
+  bottom: 10%;
+  overflow: hidden !important;
+  background: #FFFFFF;
+}
+.camera-scan .scan-control .scan-qrcode {
+  background: #EE6C4D;
+  padding: 15px;
+  border-radius: 50%;
+  flex: none;
+  margin-top: 10px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.camera-scan .scan-control .galery-image {
+  background: #3D5A80 !important;
+}
+.camera-scan .scan-control .back-btn {
+  background: #406E8E !important;
+  margin: 0 15px !important;
+}
+.camera-scan .scan-control .btn-action {
+  display: flex;
+  column-gap: 10px;
+  overflow: hidden;
+  flex: none;
+  color: #FFFFFF !important;
+  align-items: center;
+  justify-content: center;
+  font-family: "Poppins-Medium";
+  font-size: 0.8rem;
+  color: #FFFFFF;
+  padding: 10px 15px !important;
+  border-radius: 0.3rem !important;
+  margin: 0 15px;
+  align-self: stretch !important;
+}
+
 @media only screen and (max-width: 1000px) {
   .content-tab {
     padding: 120px 20px 10px 20px !important;
