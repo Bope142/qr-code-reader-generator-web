@@ -12,14 +12,16 @@ async function getCameras() {
 
 const qrcodeResult = (decodedText, decodedResult) => {
     html5QrCode.stop().then((ignore) => {
-        // QR Code scanning is stopped.
         document.querySelector('#scan').textContent = "START SCANNING"
+        document.querySelector('.modal-result-scan .message .head').innerHTML = 'Scan result'
         document.querySelector('.result').innerHTML = decodedText;
         document.querySelector('.modal-result-scan').classList.add('modal-result-scan-show')
     }).catch((err) => {
-        // Stop failed, handle it.
+        document.querySelector('#scan').textContent = "START SCANNING"
+        document.querySelector('.modal-result-scan .message .head').innerHTML = 'Scan error'
+        document.querySelector('.result').innerHTML = 'QR code error reading ! Please try again';
+        document.querySelector('.modal-result-scan').classList.add('modal-result-scan-show')
     });
-    console.log('decodedText :' + decodedText + ' \n decodedResult:' + decodedResult)
 }
 const configScan = {
     fps: 10,
@@ -44,15 +46,27 @@ async function ScanManager() {
 
 const stopScan = () => {
     html5QrCode.stop().then((ignore) => {
-        // QR Code scanning is stopped.
-        console.log(ignore)
+        document.querySelector('#scan').textContent = "START SCANNING"
     }).catch((err) => {
-        // Stop failed, handle it.
-        console.log(err)
+        document.querySelector('.modal-result-scan .message .head').innerHTML = 'Scan stop error'
+        document.querySelector('.result').innerHTML = `QR code error stop ! Please try again [error:${err}]`;
+        document.querySelector('.modal-result-scan').classList.add('modal-result-scan-show')
     });
 }
 
-
+async function scanImage(img) {
+    html5QrCode.scanFile(img, true)
+        .then(decodedText => {
+            document.querySelector('.modal-result-scan .message .head').innerHTML = ' Scan result'
+            document.querySelector('.result').innerHTML = decodedText;
+            document.querySelector('.modal-result-scan').classList.add('modal-result-scan-show')
+        })
+        .catch(err => {
+            document.querySelector('.modal-result-scan .message .head').innerHTML = 'Scan error'
+            document.querySelector('.result').innerHTML = 'QR code error reading ! Please try again';
+            document.querySelector('.modal-result-scan').classList.add('modal-result-scan-show')
+        });
+}
 window.addEventListener('load', () => {
     document.querySelector('#scan').addEventListener('click', () => {
         if (document.querySelector('#scan').textContent === 'STOP SCAN') {
@@ -63,5 +77,13 @@ window.addEventListener('load', () => {
 
         }
 
+    })
+    document.querySelector('.galery-image').addEventListener('click', () => {
+        document.querySelector('#qr-input-file').click()
+    })
+    document.querySelector('#qr-input-file').addEventListener('change', (e) => {
+        if (e.target.files.length > 0) {
+            scanImage(e.target.files[0])
+        }
     })
 })
